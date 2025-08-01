@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bd81msux3ssp1"]
+[gd_scene load_steps=13 format=3 uid="uid://bd81msux3ssp1"]
 
 [ext_resource type="PackedScene" uid="uid://biana7cpflamj" path="res://scenes/bunker/bunker.tscn" id="1_h3e3j"]
 [ext_resource type="Texture2D" uid="uid://gqya1pc8lfit" path="res://graphics/background.png" id="1_i166f"]
@@ -9,11 +9,16 @@
 [ext_resource type="AudioStream" uid="uid://dthmsdginlccw" path="res://sound/space_invaders.wav" id="3_tf2q7"]
 [ext_resource type="PackedScene" uid="uid://bxyxn1f4d7gnh" path="res://scenes/space_invaders/space_invader_3_row.tscn" id="4_vpf64"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xv074"]
+normal = Vector2(1, 0)
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sytrn"]
-normal = Vector2(0, 1)
+normal = Vector2(-1, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tf2q7"]
-distance = -960.0
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pe1ox"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_sytrn")
@@ -28,15 +33,32 @@ stream = ExtResource("3_tf2q7")
 
 [node name="Boundaries" type="Node2D" parent="."]
 
-[node name="Sky" type="Area2D" parent="Boundaries"]
+[node name="LeftWall" type="StaticBody2D" parent="Boundaries"]
+collision_layer = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Sky"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/LeftWall"]
+shape = SubResource("WorldBoundaryShape2D_xv074")
+
+[node name="RightWall" type="StaticBody2D" parent="Boundaries"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/RightWall"]
+position = Vector2(832, 0)
 shape = SubResource("WorldBoundaryShape2D_sytrn")
 
-[node name="Ground" type="Area2D" parent="Boundaries"]
+[node name="Sky" type="StaticBody2D" parent="Boundaries"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Sky"]
+shape = SubResource("WorldBoundaryShape2D_tf2q7")
+
+[node name="Ground" type="StaticBody2D" parent="Boundaries"]
+collision_layer = 8
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Ground"]
-shape = SubResource("WorldBoundaryShape2D_tf2q7")
+position = Vector2(0, 960)
+shape = SubResource("WorldBoundaryShape2D_pe1ox")
 
 [node name="SpaceInvaders" type="Node2D" parent="."]
 
@@ -71,3 +93,7 @@ position = Vector2(704, 840)
 
 [node name="PlayerShip" parent="." instance=ExtResource("2_nbgty")]
 position = Vector2(416, 904)
+
+[node name="PlayerBullets" type="Node" parent="."]
+
+[connection signal="shoot" from="PlayerShip" to="." method="_on_player_ship_shoot"]
