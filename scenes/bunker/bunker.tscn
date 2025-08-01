@@ -1,0 +1,660 @@
+[gd_scene load_steps=2 format=3 uid="uid://biana7cpflamj"]
+
+[ext_resource type="PackedScene" uid="uid://dx4gc01m2mdgs" path="res://scenes/bunker/bunker_piece.tscn" id="1_cl7vn"]
+
+[node name="Bunker" type="Node2D"]
+scale = Vector2(0.3, 0.3)
+
+[node name="BunkerPiece" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, 8)
+
+[node name="BunkerPiece2" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(88, 8)
+
+[node name="BunkerPiece3" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(104, 8)
+
+[node name="BunkerPiece4" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(120, 8)
+
+[node name="BunkerPiece5" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-120, 8)
+
+[node name="BunkerPiece6" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-104, 8)
+
+[node name="BunkerPiece7" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-88, 8)
+
+[node name="BunkerPiece8" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, 8)
+
+[node name="BunkerPiece9" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, -8)
+
+[node name="BunkerPiece10" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(88, -8)
+
+[node name="BunkerPiece11" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(104, -8)
+
+[node name="BunkerPiece12" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(120, -8)
+
+[node name="BunkerPiece13" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-120, -8)
+
+[node name="BunkerPiece14" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-104, -8)
+
+[node name="BunkerPiece15" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-88, -8)
+
+[node name="BunkerPiece16" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, -8)
+
+[node name="BunkerPiece17" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-56, -24)
+
+[node name="BunkerPiece18" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-40, -40)
+
+[node name="BunkerPiece19" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-24, -56)
+
+[node name="BunkerPiece20" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(56, -24)
+
+[node name="BunkerPiece21" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(40, -40)
+
+[node name="BunkerPiece22" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(24, -56)
+
+[node name="BunkerPiece23" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-8, -56)
+
+[node name="BunkerPiece24" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(8, -56)
+
+[node name="BunkerPiece25" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-8, -72)
+
+[node name="BunkerPiece26" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-8, -88)
+
+[node name="BunkerPiece27" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-8, -104)
+
+[node name="BunkerPiece28" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-8, -120)
+
+[node name="BunkerPiece29" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-8, -136)
+
+[node name="BunkerPiece30" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-8, -152)
+
+[node name="BunkerPiece31" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-8, -168)
+
+[node name="BunkerPiece32" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-8, -184)
+
+[node name="BunkerPiece33" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-8, -200)
+
+[node name="BunkerPiece34" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-8, -216)
+
+[node name="BunkerPiece35" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-8, -232)
+
+[node name="BunkerPiece36" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-120, -184)
+
+[node name="BunkerPiece37" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(120, -184)
+
+[node name="BunkerPiece38" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(120, -120)
+
+[node name="BunkerPiece39" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(120, -136)
+
+[node name="BunkerPiece40" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(120, -152)
+
+[node name="BunkerPiece41" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(120, -168)
+
+[node name="BunkerPiece42" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-104, -200)
+
+[node name="BunkerPiece43" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-88, -216)
+
+[node name="BunkerPiece44" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, -232)
+
+[node name="BunkerPiece45" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-56, -232)
+
+[node name="BunkerPiece46" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-40, -232)
+
+[node name="BunkerPiece47" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-24, -232)
+
+[node name="BunkerPiece48" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(8, -232)
+
+[node name="BunkerPiece49" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(24, -232)
+
+[node name="BunkerPiece50" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(40, -232)
+
+[node name="BunkerPiece51" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(56, -232)
+
+[node name="BunkerPiece52" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, -232)
+
+[node name="BunkerPiece53" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(88, -216)
+
+[node name="BunkerPiece54" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(104, -200)
+
+[node name="BunkerPiece55" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-120, -168)
+
+[node name="BunkerPiece56" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-120, -104)
+
+[node name="BunkerPiece57" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-120, -120)
+
+[node name="BunkerPiece58" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-120, -136)
+
+[node name="BunkerPiece59" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(120, -104)
+
+[node name="BunkerPiece60" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(120, -40)
+
+[node name="BunkerPiece61" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(120, -56)
+
+[node name="BunkerPiece62" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(120, -72)
+
+[node name="BunkerPiece63" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(120, -88)
+
+[node name="BunkerPiece64" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-120, -88)
+
+[node name="BunkerPiece65" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-120, -24)
+
+[node name="BunkerPiece66" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-120, -40)
+
+[node name="BunkerPiece67" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-120, -56)
+
+[node name="BunkerPiece68" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-120, -72)
+
+[node name="BunkerPiece69" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-120, -152)
+
+[node name="BunkerPiece70" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(120, -24)
+
+[node name="BunkerPiece71" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(104, -104)
+
+[node name="BunkerPiece72" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(104, -40)
+
+[node name="BunkerPiece73" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(104, -56)
+
+[node name="BunkerPiece74" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(104, -72)
+
+[node name="BunkerPiece75" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(104, -88)
+
+[node name="BunkerPiece76" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(104, -184)
+
+[node name="BunkerPiece77" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(104, -120)
+
+[node name="BunkerPiece78" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(104, -136)
+
+[node name="BunkerPiece79" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(104, -152)
+
+[node name="BunkerPiece80" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(104, -168)
+
+[node name="BunkerPiece81" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(104, -24)
+
+[node name="BunkerPiece82" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(88, -104)
+
+[node name="BunkerPiece83" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(88, -40)
+
+[node name="BunkerPiece84" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(88, -56)
+
+[node name="BunkerPiece85" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(88, -72)
+
+[node name="BunkerPiece86" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(88, -88)
+
+[node name="BunkerPiece87" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(88, -184)
+
+[node name="BunkerPiece88" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(88, -120)
+
+[node name="BunkerPiece89" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(88, -136)
+
+[node name="BunkerPiece90" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(88, -152)
+
+[node name="BunkerPiece91" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(88, -168)
+
+[node name="BunkerPiece92" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(88, -24)
+
+[node name="BunkerPiece93" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, -104)
+
+[node name="BunkerPiece94" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, -40)
+
+[node name="BunkerPiece95" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, -56)
+
+[node name="BunkerPiece96" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, -72)
+
+[node name="BunkerPiece97" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, -88)
+
+[node name="BunkerPiece98" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, -184)
+
+[node name="BunkerPiece99" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, -120)
+
+[node name="BunkerPiece100" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, -136)
+
+[node name="BunkerPiece101" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, -152)
+
+[node name="BunkerPiece102" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, -168)
+
+[node name="BunkerPiece103" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, -24)
+
+[node name="BunkerPiece104" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-104, -184)
+
+[node name="BunkerPiece105" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-104, -168)
+
+[node name="BunkerPiece106" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-104, -104)
+
+[node name="BunkerPiece107" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-104, -120)
+
+[node name="BunkerPiece108" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-104, -136)
+
+[node name="BunkerPiece109" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-104, -88)
+
+[node name="BunkerPiece110" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-104, -40)
+
+[node name="BunkerPiece111" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-104, -56)
+
+[node name="BunkerPiece112" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-104, -72)
+
+[node name="BunkerPiece113" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-104, -152)
+
+[node name="BunkerPiece114" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-88, -184)
+
+[node name="BunkerPiece115" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-88, -168)
+
+[node name="BunkerPiece116" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-88, -104)
+
+[node name="BunkerPiece117" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-88, -120)
+
+[node name="BunkerPiece118" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-88, -136)
+
+[node name="BunkerPiece119" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-88, -88)
+
+[node name="BunkerPiece120" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-88, -40)
+
+[node name="BunkerPiece121" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-88, -56)
+
+[node name="BunkerPiece122" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-88, -72)
+
+[node name="BunkerPiece123" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-88, -152)
+
+[node name="BunkerPiece124" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, -184)
+
+[node name="BunkerPiece125" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, -168)
+
+[node name="BunkerPiece126" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, -104)
+
+[node name="BunkerPiece127" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, -120)
+
+[node name="BunkerPiece128" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, -136)
+
+[node name="BunkerPiece129" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, -88)
+
+[node name="BunkerPiece130" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, -40)
+
+[node name="BunkerPiece131" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, -56)
+
+[node name="BunkerPiece132" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, -72)
+
+[node name="BunkerPiece133" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, -152)
+
+[node name="BunkerPiece134" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-56, -184)
+
+[node name="BunkerPiece135" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-56, -168)
+
+[node name="BunkerPiece136" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-56, -104)
+
+[node name="BunkerPiece137" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-56, -120)
+
+[node name="BunkerPiece138" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-56, -136)
+
+[node name="BunkerPiece139" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-56, -88)
+
+[node name="BunkerPiece140" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-56, -40)
+
+[node name="BunkerPiece141" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-56, -56)
+
+[node name="BunkerPiece142" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-56, -72)
+
+[node name="BunkerPiece143" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-56, -152)
+
+[node name="BunkerPiece144" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-40, -200)
+
+[node name="BunkerPiece145" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-40, -184)
+
+[node name="BunkerPiece146" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-40, -120)
+
+[node name="BunkerPiece147" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-40, -136)
+
+[node name="BunkerPiece148" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-40, -152)
+
+[node name="BunkerPiece149" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-40, -104)
+
+[node name="BunkerPiece150" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-40, -56)
+
+[node name="BunkerPiece151" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-40, -72)
+
+[node name="BunkerPiece152" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-40, -88)
+
+[node name="BunkerPiece153" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-40, -168)
+
+[node name="BunkerPiece154" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-24, -216)
+
+[node name="BunkerPiece155" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-24, -200)
+
+[node name="BunkerPiece156" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-24, -136)
+
+[node name="BunkerPiece157" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-24, -152)
+
+[node name="BunkerPiece158" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-24, -168)
+
+[node name="BunkerPiece159" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-24, -120)
+
+[node name="BunkerPiece160" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-24, -72)
+
+[node name="BunkerPiece161" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-24, -88)
+
+[node name="BunkerPiece162" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-24, -104)
+
+[node name="BunkerPiece163" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-24, -184)
+
+[node name="BunkerPiece164" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(8, -216)
+
+[node name="BunkerPiece165" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(8, -200)
+
+[node name="BunkerPiece166" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(8, -136)
+
+[node name="BunkerPiece167" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(8, -152)
+
+[node name="BunkerPiece168" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(8, -168)
+
+[node name="BunkerPiece169" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(8, -120)
+
+[node name="BunkerPiece170" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(8, -72)
+
+[node name="BunkerPiece171" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(8, -88)
+
+[node name="BunkerPiece172" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(8, -104)
+
+[node name="BunkerPiece173" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(8, -184)
+
+[node name="BunkerPiece174" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(24, -216)
+
+[node name="BunkerPiece175" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(24, -200)
+
+[node name="BunkerPiece176" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(24, -136)
+
+[node name="BunkerPiece177" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(24, -152)
+
+[node name="BunkerPiece178" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(24, -168)
+
+[node name="BunkerPiece179" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(24, -120)
+
+[node name="BunkerPiece180" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(24, -72)
+
+[node name="BunkerPiece181" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(24, -88)
+
+[node name="BunkerPiece182" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(24, -104)
+
+[node name="BunkerPiece183" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(24, -184)
+
+[node name="BunkerPiece184" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(40, -216)
+
+[node name="BunkerPiece185" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(40, -200)
+
+[node name="BunkerPiece186" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(40, -136)
+
+[node name="BunkerPiece187" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(40, -152)
+
+[node name="BunkerPiece188" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(40, -168)
+
+[node name="BunkerPiece189" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(40, -120)
+
+[node name="BunkerPiece190" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(40, -72)
+
+[node name="BunkerPiece191" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(40, -88)
+
+[node name="BunkerPiece192" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(40, -104)
+
+[node name="BunkerPiece193" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(40, -184)
+
+[node name="BunkerPiece194" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(56, -216)
+
+[node name="BunkerPiece195" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(56, -200)
+
+[node name="BunkerPiece196" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(56, -136)
+
+[node name="BunkerPiece197" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(56, -152)
+
+[node name="BunkerPiece198" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(56, -168)
+
+[node name="BunkerPiece199" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(56, -120)
+
+[node name="BunkerPiece200" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(56, -72)
+
+[node name="BunkerPiece201" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(56, -88)
+
+[node name="BunkerPiece202" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(56, -104)
+
+[node name="BunkerPiece203" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(56, -184)
+
+[node name="BunkerPiece204" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-88, -200)
+
+[node name="BunkerPiece205" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, -200)
+
+[node name="BunkerPiece206" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, -216)
+
+[node name="BunkerPiece207" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-56, -200)
+
+[node name="BunkerPiece208" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-56, -216)
+
+[node name="BunkerPiece209" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-40, -216)
+
+[node name="BunkerPiece210" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-104, -24)
+
+[node name="BunkerPiece211" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-88, -24)
+
+[node name="BunkerPiece212" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(-72, -24)
+
+[node name="BunkerPiece213" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(40, -56)
+
+[node name="BunkerPiece214" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(56, -56)
+
+[node name="BunkerPiece215" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, -200)
+
+[node name="BunkerPiece216" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(88, -200)
+
+[node name="BunkerPiece217" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(56, -40)
+
+[node name="BunkerPiece218" parent="." instance=ExtResource("1_cl7vn")]
+position = Vector2(72, -216)

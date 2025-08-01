@@ -10,9 +10,22 @@ config_version=5
 
 [application]
 
-config/name="space-invaders"
+config/name="space_invaders"
+run/main_scene="uid://bd81msux3ssp1"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=832
+window/size/viewport_height=1024
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Bunker"
+2d_physics/layer_3="SpaceInvader"
+2d_physics/layer_4="Boundary"
 
 [rendering]
 

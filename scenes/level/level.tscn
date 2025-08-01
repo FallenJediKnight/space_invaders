@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://bd81msux3ssp1"]
+
+[ext_resource type="PackedScene" uid="uid://biana7cpflamj" path="res://scenes/bunker/bunker.tscn" id="1_h3e3j"]
+[ext_resource type="Texture2D" uid="uid://gqya1pc8lfit" path="res://graphics/background.png" id="1_i166f"]
+[ext_resource type="Script" uid="uid://s4y1g8mwlrhl" path="res://scenes/level/level.gd" id="1_sytrn"]
+[ext_resource type="PackedScene" uid="uid://c8f7ffjbc0plb" path="res://scenes/player_ship/player_ship.tscn" id="2_nbgty"]
+[ext_resource type="PackedScene" uid="uid://ccwbcms6kpxwm" path="res://scenes/space_invaders/space_invader_1_row.tscn" id="2_qkmgm"]
+[ext_resource type="PackedScene" uid="uid://eaycncwganw1" path="res://scenes/space_invaders/space_invader_2_row.tscn" id="3_hnne4"]
+[ext_resource type="AudioStream" uid="uid://dthmsdginlccw" path="res://sound/space_invaders.wav" id="3_tf2q7"]
+[ext_resource type="PackedScene" uid="uid://bxyxn1f4d7gnh" path="res://scenes/space_invaders/space_invader_3_row.tscn" id="4_vpf64"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sytrn"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tf2q7"]
+distance = -960.0
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_sytrn")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(416, 512)
+scale = Vector2(5.2, 6.4)
+texture = ExtResource("1_i166f")
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_tf2q7")
+
+[node name="Boundaries" type="Node2D" parent="."]
+
+[node name="Sky" type="Area2D" parent="Boundaries"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Sky"]
+shape = SubResource("WorldBoundaryShape2D_sytrn")
+
+[node name="Ground" type="Area2D" parent="Boundaries"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Ground"]
+shape = SubResource("WorldBoundaryShape2D_tf2q7")
+
+[node name="SpaceInvaders" type="Node2D" parent="."]
+
+[node name="SpaceInvader1Row" parent="SpaceInvaders" instance=ExtResource("2_qkmgm")]
+position = Vector2(64, 56)
+
+[node name="SpaceInvader2Row" parent="SpaceInvaders" instance=ExtResource("3_hnne4")]
+position = Vector2(64, 128)
+
+[node name="SpaceInvader2Row2" parent="SpaceInvaders" instance=ExtResource("3_hnne4")]
+position = Vector2(64, 192)
+
+[node name="SpaceInvader3Row" parent="SpaceInvaders" instance=ExtResource("4_vpf64")]
+position = Vector2(64, 256)
+
+[node name="SpaceInvader3Row2" parent="SpaceInvaders" instance=ExtResource("4_vpf64")]
+position = Vector2(64, 320)
+
+[node name="Bunkers" type="Node2D" parent="."]
+
+[node name="Bunker" parent="Bunkers" instance=ExtResource("1_h3e3j")]
+position = Vector2(128, 840)
+
+[node name="Bunker2" parent="Bunkers" instance=ExtResource("1_h3e3j")]
+position = Vector2(320, 840)
+
+[node name="Bunker3" parent="Bunkers" instance=ExtResource("1_h3e3j")]
+position = Vector2(512, 840)
+
+[node name="Bunker4" parent="Bunkers" instance=ExtResource("1_h3e3j")]
+position = Vector2(704, 840)
+
+[node name="PlayerShip" parent="." instance=ExtResource("2_nbgty")]
+position = Vector2(416, 904)

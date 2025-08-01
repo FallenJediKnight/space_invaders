@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx4gc01m2mdgs"]
+
+[ext_resource type="Texture2D" uid="uid://svrbj5xbye8m" path="res://graphics/bunker_pixel.png" id="1_5wlxx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nd61m"]
+size = Vector2(16, 16)
+
+[node name="BunkerPiece" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nd61m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5wlxx")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvkknp4gubjs5"]
+
+[ext_resource type="Texture2D" uid="uid://dv0hnipc6ouvt" path="res://graphics/mothership.png" id="1_bwk1c"]
+[ext_resource type="Script" uid="uid://b5opo6b8s6m18" path="res://scenes/space_invaders/mothership.gd" id="1_kn21x"]
+[ext_resource type="AudioStream" uid="uid://fwjjhrumweqk" path="res://sound/mothership.wav" id="3_y7b8w"]
+
+[node name="Mothership" type="Area2D"]
+scale = Vector2(0.3, 0.3)
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("1_kn21x")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-20, -10, 20, -10, 20, 0, 40, 0, 40, 10, 50, 10, 50, 20, 60, 20, 60, 30, 70, 30, 70, 40, 80, 40, 80, 50, 70, 50, 70, 60, 60, 60, 60, 70, 50, 70, 50, 80, 40, 80, 40, 70, 30, 70, 30, 60, 20, 60, 20, 50, 10, 50, 10, 60, -10, 60, -10, 50, -20, 50, -20, 60, -30, 60, -30, 70, -40, 70, -40, 80, -50, 80, -50, 70, -60, 70, -60, 60, -70, 60, -70, 50, -80, 50, -80, 40, -70, 40, -70, 30, -60, 30, -60, 20, -50, 20, -50, 10, -40, 10, -40, 0, -20, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bwk1c")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_y7b8w")

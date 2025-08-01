@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dt87e3dofec5n"]
+
+[ext_resource type="Script" uid="uid://bgd3qrr2c648n" path="res://space_invader_3.gd" id="1_twlq2"]
+[ext_resource type="Texture2D" uid="uid://bioq782a4axm4" path="res://graphics/space_invader_3_animated1.png" id="2_3xw2l"]
+[ext_resource type="Texture2D" uid="uid://bdhu0p476yqva" path="res://graphics/space_invader_3_animated2.png" id="3_bok4x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ijkm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3xw2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bok4x")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[node name="SpaceInvader3" type="Area2D"]
+scale = Vector2(0.3, 0.3)
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("1_twlq2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-10, -30, 10, -30, 10, -20, 20, -20, 20, -10, 30, -10, 30, 0, 40, 0, 40, 10, 50, 10, 50, 40, 30, 40, 30, 50, 40, 50, 40, 60, 50, 60, 50, 70, 60, 70, 60, 80, 50, 80, 10, 80, 10, 60, -10, 60, -10, 80, -60, 80, -60, 70, -50, 70, -50, 60, -40, 60, -40, 50, -30, 50, -30, 40, -50, 40, -50, 10, -40, 10, -40, 0, -30, 0, -30, -10, -20, -10, -20, -20, -10, -20)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7ijkm")
+animation = &"fly"
+frame_progress = 0.769887

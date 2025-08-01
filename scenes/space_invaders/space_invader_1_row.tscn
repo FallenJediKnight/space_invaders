@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccwbcms6kpxwm"]
+
+[ext_resource type="PackedScene" uid="uid://sy8u5wl1bi52" path="res://scenes/space_invaders/space_invader_1.tscn" id="1_bxaor"]
+[ext_resource type="Script" uid="uid://d3esbrx0px5wp" path="res://scenes/space_invaders/space_invader_1_row.gd" id="1_jtwb8"]
+
+[node name="SpaceInvader1Row" type="Node2D"]
+script = ExtResource("1_jtwb8")
+
+[node name="SpaceInvader1" parent="." instance=ExtResource("1_bxaor")]
+position = Vector2(32, 32)
+
+[node name="SpaceInvader2" parent="." instance=ExtResource("1_bxaor")]
+position = Vector2(96, 32)
+
+[node name="SpaceInvader3" parent="." instance=ExtResource("1_bxaor")]
+position = Vector2(160, 32)
+
+[node name="SpaceInvader4" parent="." instance=ExtResource("1_bxaor")]
+position = Vector2(224, 32)
+
+[node name="SpaceInvader5" parent="." instance=ExtResource("1_bxaor")]
+position = Vector2(288, 32)
+
+[node name="SpaceInvader6" parent="." instance=ExtResource("1_bxaor")]
+position = Vector2(352, 32)
+
+[node name="SpaceInvader7" parent="." instance=ExtResource("1_bxaor")]
+position = Vector2(416, 32)
+
+[node name="SpaceInvader8" parent="." instance=ExtResource("1_bxaor")]
+position = Vector2(480, 32)
+
+[node name="SpaceInvader9" parent="." instance=ExtResource("1_bxaor")]
+position = Vector2(544, 32)
+
+[node name="SpaceInvader10" parent="." instance=ExtResource("1_bxaor")]
+position = Vector2(608, 32)
+
+[node name="SpaceInvader11" parent="." instance=ExtResource("1_bxaor")]
+position = Vector2(672, 32)
