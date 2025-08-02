@@ -1,4 +1,4 @@
-extends Area2D
+extends "res://scenes/space_invaders/space_invader.gd"
 
 
 # Called when the node enters the scene tree for the first time.
