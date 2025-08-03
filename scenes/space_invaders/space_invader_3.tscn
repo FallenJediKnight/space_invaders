@@ -1,11 +1,48 @@
-[gd_scene load_steps=5 format=3 uid="uid://dt87e3dofec5n"]
+[gd_scene load_steps=13 format=3 uid="uid://dt87e3dofec5n"]
 
 [ext_resource type="Script" uid="uid://bgd3qrr2c648n" path="res://space_invader_3.gd" id="1_twlq2"]
-[ext_resource type="Texture2D" uid="uid://bioq782a4axm4" path="res://graphics/space_invader_3_animated1.png" id="2_3xw2l"]
-[ext_resource type="Texture2D" uid="uid://bdhu0p476yqva" path="res://graphics/space_invader_3_animated2.png" id="3_bok4x"]
+[ext_resource type="Texture2D" uid="uid://bioq782a4axm4" path="res://graphics/space_invader_3/space_invader_3_animated1.png" id="2_3xw2l"]
+[ext_resource type="Texture2D" uid="uid://blavn57174q37" path="res://graphics/space_invader_3/space_invader_3_explode1.png" id="2_xfl01"]
+[ext_resource type="Texture2D" uid="uid://b4071bpo5fdlw" path="res://graphics/space_invader_3/space_invader_3_explode2.png" id="3_a7r3x"]
+[ext_resource type="Texture2D" uid="uid://bdhu0p476yqva" path="res://graphics/space_invader_3/space_invader_3_animated2.png" id="3_bok4x"]
+[ext_resource type="Texture2D" uid="uid://bw6jatxpe2ymv" path="res://graphics/space_invader_3/space_invader_3_explode3.png" id="4_ewenc"]
+[ext_resource type="Texture2D" uid="uid://cacm02xe6iouo" path="res://graphics/space_invader_3/space_invader_3_explode4.png" id="5_6rtby"]
+[ext_resource type="Texture2D" uid="uid://cqec5s3khookk" path="res://graphics/space_invader_3/space_invader_3_explode5.png" id="6_e53o1"]
+[ext_resource type="Texture2D" uid="uid://ocjfhtqmhsfa" path="res://graphics/space_invader_3/space_invader_3_explode6.png" id="7_jmrlp"]
+[ext_resource type="Texture2D" uid="uid://f0lmriu58rsf" path="res://graphics/space_invader_3/space_invader_3_explode7.png" id="8_16f8n"]
+[ext_resource type="Texture2D" uid="uid://coli2ug1xem7y" path="res://graphics/space_invader_3/space_invader_3_explode8.png" id="9_on7w4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7ijkm"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xfl01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a7r3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ewenc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6rtby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_e53o1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jmrlp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_16f8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_on7w4")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_3xw2l")
@@ -29,5 +66,4 @@ polygon = PackedVector2Array(-10, -30, 10, -30, 10, -20, 20, -20, 20, -10, 30, -
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7ijkm")
-animation = &"fly"
-frame_progress = 0.769887
+animation = &"explode"

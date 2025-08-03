@@ -5,9 +5,12 @@ const SPEED = 300.0
 signal shoot(bullet: Area2D, location: Vector2)
 
 var bullet = preload("res://scenes/player_ship/player_ship_bullet.tscn")
+var gun_enabled = true
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot") and gun_enabled:
+		gun_enabled = false
+		$GunTimer.start()
 		shoot.emit(bullet, $Marker2D.global_position)
 
 func _physics_process(_delta: float) -> void:
@@ -15,3 +18,7 @@ func _physics_process(_delta: float) -> void:
 	if direction:
 		velocity.x = direction * SPEED
 		move_and_slide()
+
+
+func _on_gun_timer_timeout() -> void:
+	gun_enabled = true

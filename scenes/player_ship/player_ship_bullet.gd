@@ -9,7 +9,14 @@ func _physics_process(delta):
 
 
 func _on_area_shape_entered(_area_rid: RID, area: Area2D, _area_shape_index: int, _local_shape_index: int) -> void:
-	if area is SpaceInvader or BunkerPiece:
-		# TODO add explosion effects: sound and animation
-		area.queue_free()
-		queue_free()
+	velocity = Vector2.ZERO
+	if area is SpaceInvader:
+		visible = false
+		area.explode()
+	elif area is BunkerPiece:
+		visible = false
+		area.on_hit()
+	else:
+		$AnimatedSprite2D.play("explode")
+		await $AnimatedSprite2D.animation_finished
+	queue_free()
