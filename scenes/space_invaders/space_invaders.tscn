@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://bdw85ni8eq26t"]
+
+[ext_resource type="Script" uid="uid://bc15mi8sfx7k7" path="res://scenes/space_invaders/space_invaders.gd" id="1_8eb72"]
+[ext_resource type="PackedScene" uid="uid://ccwbcms6kpxwm" path="res://scenes/space_invaders/space_invader_1_row.tscn" id="1_gt6qp"]
+[ext_resource type="PackedScene" uid="uid://eaycncwganw1" path="res://scenes/space_invaders/space_invader_2_row.tscn" id="2_8eb72"]
+[ext_resource type="PackedScene" uid="uid://bxyxn1f4d7gnh" path="res://scenes/space_invaders/space_invader_3_row.tscn" id="3_ioh10"]
+
+[sub_resource type="GDScript" id="GDScript_8eb72"]
+script/source = "extends \"res://scenes/space_invaders/space_invaders_row.gd\"
+"
+
+[sub_resource type="GDScript" id="GDScript_ioh10"]
+script/source = "extends \"res://scenes/space_invaders/space_invaders_row.gd\"
+"
+
+[node name="SpaceInvaders" type="Node2D"]
+script = ExtResource("1_8eb72")
+
+[node name="Rows" type="Node" parent="."]
+
+[node name="SpaceInvader1Row" parent="Rows" instance=ExtResource("1_gt6qp")]
+position = Vector2(64, 56)
+
+[node name="SpaceInvader2Row" parent="Rows" instance=ExtResource("2_8eb72")]
+position = Vector2(64, 128)
+script = SubResource("GDScript_8eb72")
+
+[node name="SpaceInvader2Row2" parent="Rows" instance=ExtResource("2_8eb72")]
+position = Vector2(64, 192)
+script = SubResource("GDScript_8eb72")
+
+[node name="SpaceInvader3Row" parent="Rows" instance=ExtResource("3_ioh10")]
+position = Vector2(64, 256)
+script = SubResource("GDScript_ioh10")
+
+[node name="SpaceInvader3Row2" parent="Rows" instance=ExtResource("3_ioh10")]
+position = Vector2(64, 320)
+script = SubResource("GDScript_ioh10")
+
+[node name="EdgeTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="EdgeTimer" to="." method="_on_edge_timer_timeout"]

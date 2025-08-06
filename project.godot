@@ -15,6 +15,10 @@ run/main_scene="uid://bd81msux3ssp1"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SignalBus="*res://signal_bus.gd"
+
 [display]
 
 window/size/viewport_width=832

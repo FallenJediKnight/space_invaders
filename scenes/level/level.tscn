@@ -1,13 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://bd81msux3ssp1"]
+[gd_scene load_steps=11 format=3 uid="uid://bd81msux3ssp1"]
 
 [ext_resource type="PackedScene" uid="uid://biana7cpflamj" path="res://scenes/bunker/bunker.tscn" id="1_h3e3j"]
 [ext_resource type="Texture2D" uid="uid://gqya1pc8lfit" path="res://graphics/background.png" id="1_i166f"]
 [ext_resource type="Script" uid="uid://s4y1g8mwlrhl" path="res://scenes/level/level.gd" id="1_sytrn"]
 [ext_resource type="PackedScene" uid="uid://c8f7ffjbc0plb" path="res://scenes/player_ship/player_ship.tscn" id="2_nbgty"]
-[ext_resource type="PackedScene" uid="uid://ccwbcms6kpxwm" path="res://scenes/space_invaders/space_invader_1_row.tscn" id="2_qkmgm"]
-[ext_resource type="PackedScene" uid="uid://eaycncwganw1" path="res://scenes/space_invaders/space_invader_2_row.tscn" id="3_hnne4"]
 [ext_resource type="AudioStream" uid="uid://dthmsdginlccw" path="res://sound/space_invaders.wav" id="3_tf2q7"]
-[ext_resource type="PackedScene" uid="uid://bxyxn1f4d7gnh" path="res://scenes/space_invaders/space_invader_3_row.tscn" id="4_vpf64"]
+[ext_resource type="PackedScene" uid="uid://bdw85ni8eq26t" path="res://scenes/space_invaders/space_invaders.tscn" id="4_vpf64"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xv074"]
 normal = Vector2(1, 0)
@@ -60,22 +58,7 @@ collision_mask = 4
 position = Vector2(0, 960)
 shape = SubResource("WorldBoundaryShape2D_pe1ox")
 
-[node name="SpaceInvaders" type="Node2D" parent="."]
-
-[node name="SpaceInvader1Row" parent="SpaceInvaders" instance=ExtResource("2_qkmgm")]
-position = Vector2(64, 56)
-
-[node name="SpaceInvader2Row" parent="SpaceInvaders" instance=ExtResource("3_hnne4")]
-position = Vector2(64, 128)
-
-[node name="SpaceInvader2Row2" parent="SpaceInvaders" instance=ExtResource("3_hnne4")]
-position = Vector2(64, 192)
-
-[node name="SpaceInvader3Row" parent="SpaceInvaders" instance=ExtResource("4_vpf64")]
-position = Vector2(64, 256)
-
-[node name="SpaceInvader3Row2" parent="SpaceInvaders" instance=ExtResource("4_vpf64")]
-position = Vector2(64, 320)
+[node name="SpaceInvaders" parent="." instance=ExtResource("4_vpf64")]
 
 [node name="Bunkers" type="Node2D" parent="."]
 

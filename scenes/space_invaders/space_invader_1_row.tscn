@@ -1,10 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccwbcms6kpxwm"]
 
 [ext_resource type="PackedScene" uid="uid://sy8u5wl1bi52" path="res://scenes/space_invaders/space_invader_1.tscn" id="1_bxaor"]
-[ext_resource type="Script" uid="uid://d3esbrx0px5wp" path="res://scenes/space_invaders/space_invader_1_row.gd" id="1_jtwb8"]
+
+[sub_resource type="GDScript" id="GDScript_bxaor"]
+script/source = "extends \"res://scenes/space_invaders/space_invaders_row.gd\"
+"
 
 [node name="SpaceInvader1Row" type="Node2D"]
-script = ExtResource("1_jtwb8")
+script = SubResource("GDScript_bxaor")
 
 [node name="SpaceInvader1" parent="." instance=ExtResource("1_bxaor")]
 position = Vector2(32, 32)

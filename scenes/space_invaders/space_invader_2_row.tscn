@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://eaycncwganw1"]
 
-[ext_resource type="Script" uid="uid://gfn3ye022dkm" path="res://scenes/space_invaders/space_invader_2_row.gd" id="1_2465i"]
+[ext_resource type="Script" uid="uid://yvby34l8lwy1" path="res://scenes/space_invaders/space_invader_2_row.gd" id="1_2465i"]
 [ext_resource type="PackedScene" uid="uid://dhkvhmh71b358" path="res://scenes/space_invaders/space_invader_2.tscn" id="1_qf688"]
 
 [node name="SpaceInvader2Row" type="Node2D"]
