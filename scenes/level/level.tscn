@@ -78,5 +78,3 @@ position = Vector2(704, 840)
 position = Vector2(416, 904)
 
 [node name="PlayerBullets" type="Node" parent="."]
-
-[connection signal="shoot" from="PlayerShip" to="." method="_on_player_ship_shoot"]

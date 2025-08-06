@@ -2,16 +2,22 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 
-signal shoot(bullet: Area2D, location: Vector2)
-
 var bullet = preload("res://scenes/player_ship/player_ship_bullet.tscn")
 var gun_enabled = true
+var last_destroyed_rid: RID
+var score = 0
+
+
+func _ready() -> void:
+	SignalBus.invader_destroyed.connect(_on_invader_destroyed)
+
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("shoot") and gun_enabled:
 		gun_enabled = false
 		$GunTimer.start()
-		shoot.emit(bullet, $Marker2D.global_position)
+		SignalBus.player_ship_shoot.emit(bullet, $Marker2D.global_position)
+
 
 func _physics_process(_delta: float) -> void:
 	var direction = Input.get_axis("ui_left", "ui_right")
@@ -22,3 +28,9 @@ func _physics_process(_delta: float) -> void:
 
 func _on_gun_timer_timeout() -> void:
 	gun_enabled = true
+
+
+func _on_invader_destroyed(invader_rid: RID) -> void:
+	if invader_rid != last_destroyed_rid:
+		score += 1
+		last_destroyed_rid = invader_rid
