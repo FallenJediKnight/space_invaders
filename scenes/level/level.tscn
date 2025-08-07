@@ -78,3 +78,9 @@ position = Vector2(704, 840)
 position = Vector2(416, 904)
 
 [node name="PlayerBullets" type="Node" parent="."]
+
+[node name="MothershipTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="MothershipTimer" to="." method="_on_mothership_timer_timeout"]

@@ -2,6 +2,39 @@ extends Area2D
 
 class_name Mothership
 
-# Called when the node enters the scene tree for the first time.
+var health = 3
+var speed = 60.0
+var direction = Vector2.RIGHT
+var last_taken_damage_from: RID
+
+
 func _ready() -> void:
-	$AudioStreamPlayer2D.play()
+	$AudioStreamPlayer.play()
+
+
+func _physics_process(delta: float) -> void:
+	if has_left_screen():
+		SignalBus.mothership_retreating.emit()
+	position += speed * direction * delta
+
+
+func has_left_screen() -> bool:
+	return (position.x > get_viewport_rect().end.x) or (position.x < get_viewport_rect().position.x)
+
+
+func take_damage(bullet_rid: RID) -> void:
+	if bullet_rid != last_taken_damage_from:
+		last_taken_damage_from = bullet_rid
+		health -= 1
+		if health == 0:
+			explode()
+
+
+func explode() -> void:
+	SignalBus.mothership_destroyed.emit()
+	# TODO add explosion and sfx
+	queue_free()
+
+
+func set_new_movement_parameters() -> void:
+	position = Vector2(0, 16)

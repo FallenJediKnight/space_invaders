@@ -13,6 +13,7 @@ var left_edge_delta = 32
 var descend_delta = 32
 var direction = Vector2.RIGHT
 
+
 func _process(delta: float) -> void:
 	if has_invaded():
 		SignalBus.game_over.emit()
@@ -20,19 +21,24 @@ func _process(delta: float) -> void:
 		SignalBus.hit_an_edge.emit()
 	var position_delta = direction * speed * delta
 	position += position_delta
-	
+
+
 func descend() -> void:
 	position += Vector2(0, descend_delta)
 	direction = direction.rotated(deg_to_rad(180))
 
+
 func accelerate() -> void:
 	speed = min(MAX_SPEED, speed * SPEED_INCREASE_CONSTANT)
+
 
 func has_hit_an_edge() -> bool:
 	return (position.x > get_viewport_rect().end.x - right_edge_delta) or (position.x < get_viewport_rect().position.x - left_edge_delta)
 
+
 func has_invaded() -> bool:
 	return global_position.y + DISTANCE_TO_BOTTOM_OF_SPRITE > GAME_OVER_Y_POSITION
+
 
 func explode() -> void:
 	# TODO add explosion effects: sound

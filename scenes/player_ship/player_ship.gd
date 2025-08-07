@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
+const INVADER_POINT_VALUE = 1
+const MOTHERSHIP_POINT_VALUE = 5
 
 var bullet = preload("res://scenes/player_ship/player_ship_bullet.tscn")
 var gun_enabled = true
@@ -10,6 +12,7 @@ var score = 0
 
 func _ready() -> void:
 	SignalBus.invader_destroyed.connect(_on_invader_destroyed)
+	SignalBus.mothership_destroyed.connect(_on_mothership_destroyed)
 
 
 func _process(_delta: float) -> void:
@@ -32,5 +35,9 @@ func _on_gun_timer_timeout() -> void:
 
 func _on_invader_destroyed(invader_rid: RID) -> void:
 	if invader_rid != last_destroyed_rid:
-		score += 1
+		score += INVADER_POINT_VALUE
 		last_destroyed_rid = invader_rid
+
+
+func _on_mothership_destroyed() -> void:
+	score += MOTHERSHIP_POINT_VALUE
