@@ -8,18 +8,24 @@ func _ready() -> void:
 	SignalBus.game_over.connect(_on_game_over)
 	SignalBus.player_ship_shoot.connect(_on_player_ship_shoot)
 	SignalBus.mothership_retreating.connect(_on_mothership_retreating)
+	SignalBus.invader_shoot.connect(_on_invader_shoot)
 	$BackgroundMusic.play()
 
 
 func _on_player_ship_shoot(bullet: Resource, location: Vector2) -> void:
-	var spawned_bullet: Area2D = bullet.instantiate()
+	var spawned_bullet: PlayerShipBullet = bullet.instantiate()
 	spawned_bullet.position = location
 	$PlayerBullets.add_child(spawned_bullet)
+
+
+func _on_invader_shoot(bullet: Resource, location: Vector2) -> void:
+	var spawned_bullet: SpaceInvaderBullet = bullet.instantiate()
 	spawned_bullet.position = location
+	$InvaderBullets.add_child(spawned_bullet)
 
 
 func _on_game_over() -> void:
-	process_mode = Node.PROCESS_MODE_DISABLED
+	call_deferred("game_over")
 
 
 func _on_mothership_timer_timeout() -> void:
@@ -32,3 +38,7 @@ func _on_mothership_retreating() -> void:
 	mothership_invading = false
 	remove_child(mothership)
 	mothership.set_new_movement_parameters()
+
+
+func game_over() -> void:
+	process_mode = Node.PROCESS_MODE_DISABLED

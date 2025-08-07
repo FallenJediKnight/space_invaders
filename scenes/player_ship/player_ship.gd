@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name PlayerShip
+
 const SPEED = 300.0
 const INVADER_POINT_VALUE = 1
 const MOTHERSHIP_POINT_VALUE = 5
@@ -8,6 +10,8 @@ var bullet = preload("res://scenes/player_ship/player_ship_bullet.tscn")
 var gun_enabled = true
 var last_destroyed_rid: RID
 var score = 0
+var lives = 3
+var last_taken_damage_from: RID
 
 
 func _ready() -> void:
@@ -39,3 +43,16 @@ func _on_invader_destroyed(invader_rid: RID) -> void:
 
 func _on_mothership_destroyed() -> void:
 	score += MOTHERSHIP_POINT_VALUE
+
+
+func take_damage(bullet_rid: RID) -> void:
+	if bullet_rid != last_taken_damage_from:
+		last_taken_damage_from = bullet_rid
+		lives -= 1
+		if lives == 0:
+			explode()
+
+
+func explode() -> void:
+	SignalBus.game_over.emit()
+	# TODO add explosion and sfx

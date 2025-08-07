@@ -18,7 +18,7 @@ texture = ExtResource("1_evpo0")
 position = Vector2(0, -40)
 
 [node name="GunTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.3
 one_shot = true
 
 [connection signal="timeout" from="GunTimer" to="." method="_on_gun_timer_timeout"]

@@ -6,12 +6,33 @@ const GAME_OVER_Y_POSITION: float = 768.0
 const DISTANCE_TO_BOTTOM_OF_SPRITE: float = 25.0
 const MAX_SPEED: float = 200.0
 const SPEED_INCREASE_CONSTANT = 1.01
+const MAX_BULLET_WAIT_TIME = 20
+const MIN_BULLET_WAIT_TIME = 1
 
 var speed = 20.0
 var right_edge_delta = 100.0
 var left_edge_delta = 32
 var descend_delta = 32
 var direction = Vector2.RIGHT
+var shooting_allowed = true
+var bullet_timer: Timer
+var bullet = preload("res://scenes/space_invaders/space_invader_bullet.tscn")
+
+
+func _ready() -> void:
+	bullet_timer = Timer.new()
+	add_child(bullet_timer)
+	bullet_timer.one_shot = true
+	bullet_timer.wait_time = randi_range(MIN_BULLET_WAIT_TIME, MAX_BULLET_WAIT_TIME)
+	bullet_timer.autostart = true
+	bullet_timer.timeout.connect(_on_bullet_timer_timeout)
+
+
+func _process(_delta: float) -> void:
+	if shooting_allowed:
+		shooting_allowed = false
+		bullet_timer.wait_time = randi_range(MIN_BULLET_WAIT_TIME, MAX_BULLET_WAIT_TIME)
+		bullet_timer.start()
 
 
 func _physics_process(delta: float) -> void:
@@ -21,6 +42,11 @@ func _physics_process(delta: float) -> void:
 		SignalBus.hit_an_edge.emit()
 	var position_delta = direction * speed * delta
 	position += position_delta
+
+
+func _on_bullet_timer_timeout() -> void:
+	SignalBus.invader_shoot.emit(bullet, $BulletSpawnPoint.global_position)
+	shooting_allowed = true
 
 
 func descend() -> void:
