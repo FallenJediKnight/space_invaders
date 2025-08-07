@@ -15,14 +15,12 @@ func _ready() -> void:
 	SignalBus.mothership_destroyed.connect(_on_mothership_destroyed)
 
 
-func _process(_delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("shoot") and gun_enabled:
 		gun_enabled = false
 		$GunTimer.start()
 		SignalBus.player_ship_shoot.emit(bullet, $Marker2D.global_position)
-
-
-func _physics_process(_delta: float) -> void:
+	
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED

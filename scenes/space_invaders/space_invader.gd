@@ -14,7 +14,7 @@ var descend_delta = 32
 var direction = Vector2.RIGHT
 
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if has_invaded():
 		SignalBus.game_over.emit()
 	if has_hit_an_edge():
@@ -42,6 +42,7 @@ func has_invaded() -> bool:
 
 func explode() -> void:
 	# TODO add explosion effects: sound
+	set_collision_layer_value(3, false)
 	SignalBus.invader_destroyed.emit(get_rid())
 	$AnimatedSprite2D.play("explode", 2.0)
 	await $AnimatedSprite2D.animation_finished
