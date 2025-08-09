@@ -5,8 +5,8 @@ class_name SpaceInvader
 const GAME_OVER_Y_POSITION: float = 768.0
 const DISTANCE_TO_BOTTOM_OF_SPRITE: float = 25.0
 const MAX_SPEED: float = 200.0
-const SPEED_INCREASE_CONSTANT = 1.01
-const MAX_BULLET_WAIT_TIME = 20
+const SPEED_INCREASE_CONSTANT = 1.03
+const MAX_BULLET_WAIT_TIME = 15
 const MIN_BULLET_WAIT_TIME = 1
 
 var speed = 20.0
