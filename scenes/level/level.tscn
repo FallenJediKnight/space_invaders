@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bd81msux3ssp1"]
+[gd_scene load_steps=12 format=3 uid="uid://bd81msux3ssp1"]
 
 [ext_resource type="PackedScene" uid="uid://biana7cpflamj" path="res://scenes/bunker/bunker.tscn" id="1_h3e3j"]
 [ext_resource type="Texture2D" uid="uid://gqya1pc8lfit" path="res://graphics/background.png" id="1_i166f"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c8f7ffjbc0plb" path="res://scenes/player_ship/player_ship.tscn" id="2_nbgty"]
 [ext_resource type="AudioStream" uid="uid://dthmsdginlccw" path="res://sound/space_invaders.wav" id="3_tf2q7"]
 [ext_resource type="PackedScene" uid="uid://bdw85ni8eq26t" path="res://scenes/space_invaders/space_invaders.tscn" id="4_vpf64"]
+[ext_resource type="PackedScene" uid="uid://byirr14ykkpku" path="res://scenes/ui/hud.tscn" id="7_wcngd"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xv074"]
 normal = Vector2(1, 0)
@@ -84,5 +85,7 @@ position = Vector2(416, 904)
 [node name="MothershipTimer" type="Timer" parent="."]
 wait_time = 3.0
 autostart = true
+
+[node name="HUD" parent="." instance=ExtResource("7_wcngd")]
 
 [connection signal="timeout" from="MothershipTimer" to="." method="_on_mothership_timer_timeout"]

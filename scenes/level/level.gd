@@ -9,6 +9,8 @@ func _ready() -> void:
 	SignalBus.player_ship_shoot.connect(_on_player_ship_shoot)
 	SignalBus.mothership_retreating.connect(_on_mothership_retreating)
 	SignalBus.invader_shoot.connect(_on_invader_shoot)
+	SignalBus.update_score.connect(_on_score_updated)
+	SignalBus.player_life_lost.connect(_on_player_life_lost)
 	$BackgroundMusic.play()
 
 
@@ -40,5 +42,14 @@ func _on_mothership_retreating() -> void:
 	mothership.set_new_movement_parameters()
 
 
+func _on_score_updated(score: int) -> void:
+	$HUD.update_score(score)
+
+
+func _on_player_life_lost() -> void:
+	$HUD.update_lives($PlayerShip.lives)
+
+
 func game_over() -> void:
+	$HUD.show_game_over()
 	process_mode = Node.PROCESS_MODE_DISABLED

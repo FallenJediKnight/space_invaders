@@ -9,7 +9,7 @@ const MOTHERSHIP_POINT_VALUE = 5
 var bullet = preload("res://scenes/player_ship/player_ship_bullet.tscn")
 var gun_enabled = true
 var last_destroyed_rid: RID
-var score = 0
+var score = 0 : set = update_score
 var lives = 3
 var last_taken_damage_from: RID
 
@@ -45,10 +45,16 @@ func _on_mothership_destroyed() -> void:
 	score += MOTHERSHIP_POINT_VALUE
 
 
+func update_score(value: int) -> void:
+	score = value
+	SignalBus.update_score.emit(value)
+
+
 func take_damage(bullet_rid: RID) -> void:
 	if bullet_rid != last_taken_damage_from:
 		last_taken_damage_from = bullet_rid
 		lives -= 1
+		SignalBus.player_life_lost.emit()
 		if lives == 0:
 			explode()
 
