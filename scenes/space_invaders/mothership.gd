@@ -37,4 +37,6 @@ func explode() -> void:
 
 
 func set_new_movement_parameters() -> void:
-	position = Vector2(0, 16)
+	speed = randf_range(40, 80)
+	direction = Vector2.RIGHT if randi_range(0, 1) == 0 else Vector2.LEFT
+	position = Vector2(0, 16) if direction == Vector2.RIGHT else Vector2(832, 16)

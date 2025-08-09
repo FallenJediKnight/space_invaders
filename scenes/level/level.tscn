@@ -82,10 +82,6 @@ position = Vector2(416, 904)
 
 [node name="InvaderBullets" type="Node" parent="."]
 
-[node name="MothershipTimer" type="Timer" parent="."]
-wait_time = 3.0
-autostart = true
-
 [node name="HUD" parent="." instance=ExtResource("7_wcngd")]
 
-[connection signal="timeout" from="MothershipTimer" to="." method="_on_mothership_timer_timeout"]
+[connection signal="start_game" from="HUD" to="." method="_on_hud_start_game"]
