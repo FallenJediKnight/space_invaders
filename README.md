@@ -9,3 +9,4 @@ Game #3 of my 20 games challenge
 - Add ability to pause game
 - If game is hard enough now, add high scores (save game state)
 - Add tougher alien type that takes 2 hits
+- Points scale with time. I.e., the faster you beat the game the higher score you can achieve
