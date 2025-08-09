@@ -1,5 +1,8 @@
 extends Node2D
 
+const MOTHERSHIP_TIMER_MIN = 4
+const MOTHERSHIP_TIMER_MAX = 12
+const MAX_SCORE = 60
 
 var mothership: Mothership = preload("res://scenes/space_invaders/mothership.tscn").instantiate()
 var mothership_timer: Timer = Timer.new()
@@ -17,10 +20,15 @@ func _ready() -> void:
 	add_child(mothership_timer)
 	mothership_timer.timeout.connect(_on_mothership_timer_timeout)
 	mothership_timer.one_shot = true
-	mothership_timer.wait_time = randi_range(4, 12)
+	mothership_timer.wait_time = randi_range(MOTHERSHIP_TIMER_MIN, MOTHERSHIP_TIMER_MAX)
 	mothership_timer.start()
 	
 	$BackgroundMusic.play()
+
+
+func _process(_delta: float) -> void:
+	if $PlayerShip.score == MAX_SCORE:
+		call_deferred("game_over", "You win!")
 
 
 func _on_player_ship_shoot(bullet: Resource, location: Vector2) -> void:
@@ -36,7 +44,7 @@ func _on_invader_shoot(bullet: Resource, location: Vector2) -> void:
 
 
 func _on_game_over() -> void:
-	call_deferred("game_over")
+	call_deferred("game_over", "Game Over")
 
 
 func _on_mothership_timer_timeout() -> void:
@@ -49,7 +57,7 @@ func _on_mothership_retreating() -> void:
 	mothership_invading = false
 	remove_child(mothership)
 	mothership.set_new_movement_parameters()
-	mothership_timer.wait_time = randi_range(4, 12)
+	mothership_timer.wait_time = randi_range(MOTHERSHIP_TIMER_MIN, MOTHERSHIP_TIMER_MAX)
 	mothership_timer.start()
 
 
@@ -61,12 +69,11 @@ func _on_player_life_lost() -> void:
 	$HUD.update_lives($PlayerShip.lives)
 
 
-func game_over() -> void:
-	$HUD.show_game_over()
+func game_over(message: String) -> void:
+	$HUD.show_game_over(message)
 	get_tree().paused = true
 
 
 func _on_hud_start_game() -> void:
-	print('here')
 	get_tree().paused = false
 	get_tree().reload_current_scene()

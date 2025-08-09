@@ -10,8 +10,8 @@ func show_message(text: String) -> void:
 	$Message.show()
 
 
-func show_game_over() -> void:
-	show_message("Game Over")
+func show_game_over(message: String) -> void:
+	show_message(message)
 	$StartButton.show()
 
 
